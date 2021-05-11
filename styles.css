@@ -1,0 +1,40 @@
+* {
+  background-color: #3d405b;
+}
+
+#navbar-container {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+}
+
+button {
+  flex: 1;
+}
+
+button a {
+  color: rgb(59, 59, 59);
+  text-decoration: none;
+  font: bold 2.5em Garamond, serif;
+  background-color: inherit;
+}
+
+button:hover {
+  opacity: 0.75;
+}
+
+button.clock {
+  background-color: #81b29a;
+}
+
+button.timer {
+  background-color: #f2cc8f;
+}
+
+button.stopwatch {
+  background-color: #e07a5f;
+}
