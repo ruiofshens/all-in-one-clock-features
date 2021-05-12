@@ -1,5 +1,8 @@
 * {
-  background-color: #3d405b;
+  /* background-color: #3d405b; */
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  box-sizing: border-box;
 }
 
 #navbar-container {
@@ -14,27 +17,57 @@
 
 button {
   flex: 1;
-}
-
-button a {
-  color: rgb(59, 59, 59);
-  text-decoration: none;
-  font: bold 2.5em Garamond, serif;
-  background-color: inherit;
+  font: bold 2em "Open Sans", serif;
+  color: rgb(56, 56, 56);
+  overflow-x: hidden;
 }
 
 button:hover {
   opacity: 0.75;
 }
 
-button.clock {
+button#clock {
+  /* background-color: #81b29a; */
+  background-image: linear-gradient(to right, #23723d, #45d3c9);
+}
+
+button#timer {
+  /* background-color: #f2cc8f; */
+  background-image: linear-gradient(to right, #e7a02e, #eed6af);
+}
+
+button#stopwatch {
+  /* background-color: #e07a5f; */
+  background-image: linear-gradient(to right, #fd5b42, #fdc59a);
+}
+
+#timer-feature {
+  display: none;
+}
+
+#stopwatch-feature {
+  display: none;
+}
+
+#clock-time {
+  font-family: "Orbitron", serif;
+  font-size: 6rem;
+}
+#clock-feature button {
+  padding: 1em;
+  border-radius: 8px;
+  color: rgb(56, 56, 56);
   background-color: #81b29a;
+  font-size: 2rem;
+  border: black;
+  cursor: pointer;
 }
 
-button.timer {
-  background-color: #f2cc8f;
-}
-
-button.stopwatch {
-  background-color: #e07a5f;
+.content {
+  margin-left: 20%;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font: bold 6em "Open Sans", serif;
 }

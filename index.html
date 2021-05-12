@@ -5,18 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All-In-One Clock Features</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <script src="app.js" defer></script>
     <main>
-        <nav>
-            <div id="navbar-container">
-                <button class="clock"><a href="">Clock</a></button>
-                <button class="timer"><a href="">Timer</a></button>
-                <button class="stopwatch"><a href="">Stopwatch</a></button>
+        <div id="main-container">
+            <nav>
+                <div id="navbar-container">
+                    <button class="nav-button" id="clock" onclick="toggleTab('clock-feature')">Clock</button>
+                    <button class="nav-button" id="timer" onclick="toggleTab('timer-feature')">Timer</button>
+                    <button class="nav-button" id="stopwatch" onclick="toggleTab('stopwatch-feature')">Stopwatch</button>
+                </div>
+            </nav>
+            <div id="clock-feature" class="content">
+                <span id = "clock-time">Time</span>
+                <button onclick="changeTimeFormat()">Toggle 12hr/24hr format</button>
             </div>
-        </nav>
+            <div id="timer-feature" class = "content">Timer</div>
+            <div id="stopwatch-feature" class = "content">Stopwatch</div>
+        </div>
     </main>
 </body>
 </html>
