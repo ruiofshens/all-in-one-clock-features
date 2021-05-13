@@ -7,8 +7,9 @@ let tabs = document.getElementsByClassName("nav-button");
 //Variable that dictates which time format to use
 let timeFormat = 0;
 
+const initialCountdownTime = 3600;
 let countdownActive = false;
-let countdownTime = 3600;
+let countdownTime = initialCountdownTime;
 
 let stopwatchActive = false;
 let stopwatchTime = 0;
@@ -59,8 +60,10 @@ function toggleTime() {
 }
 
 function toggleCountdown() {
-    countdownActive = !countdownActive;
-    startCountdown();
+    if (countdownTime != -1) {
+        countdownActive = !countdownActive;
+        startCountdown();
+    }
 }
 
 function toggleStopwatch() {
@@ -96,7 +99,8 @@ function startCountdown() {
         timeInfo = convertTimeToHMS(countdownTime);
         document.getElementById("countdown-time").innerText = `${timeInfo.hours} : ${timeInfo.mins} : ${timeInfo.secs}`;
         countdownTime--;
-        setTimeout(startCountdown, 1000);
+        if (countdownTime != -1) setTimeout(startCountdown, 1000)
+        else setTimeout(() => {document.getElementById("countdown-time").innerText = "Time's up!"}, 1000) ;
     }
 }
 
@@ -110,11 +114,12 @@ function startStopwatch() {
 }
 
 function resetCountdown() {
-    document.getElementById("countdown-time").innerText = "01:00:00";
+    document.getElementById("countdown-time").innerText = "01 : 00 : 00";
+    countdownTime = initialCountdownTime;
 }
 
 function resetStopwatch() {
-    document.getElementById("stopwatch-time").innerText = "00:00:00";
+    document.getElementById("stopwatch-time").innerText = "00 : 00 : 00";
 }
 
 //============================================== Functions to Run on Start ==============================================//

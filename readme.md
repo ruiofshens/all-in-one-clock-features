@@ -1,4 +1,4 @@
-# Clock-Features Website Mini-Project
+# Clock-Features Website (with Responsive Web Design)
 
 ## Introduction
 
