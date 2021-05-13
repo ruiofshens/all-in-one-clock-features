@@ -1,7 +1,8 @@
-* {
-  /* background-color: #3d405b; */
-  background-image: url("/images/background.jpg");
-  background-size: cover;
+body {
+  background-color: #3d405b;
+  /* background-image: url("images/background-min.jpg");
+  background-size: cover; */
+  background-image: linear-gradient(to right, #676977, #292f64);
   box-sizing: border-box;
 }
 
@@ -22,6 +23,7 @@ button {
   overflow-x: hidden;
 }
 
+button.active,
 button:hover {
   opacity: 0.75;
 }
@@ -49,11 +51,14 @@ button#stopwatch {
   display: none;
 }
 
-#clock-time {
+#clock-time,
+#timer-time {
   font-family: "Orbitron", serif;
   font-size: 6rem;
 }
-#clock-feature button {
+
+#clock-feature button,
+#timer-feature button {
   padding: 1em;
   border-radius: 8px;
   color: rgb(56, 56, 56);
