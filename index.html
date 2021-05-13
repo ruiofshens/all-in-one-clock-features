@@ -21,20 +21,23 @@
                     <button class="nav-button" id="stopwatch" onclick="toggleTab('stopwatch-feature', 'stopwatch')">Stopwatch</button>
                 </div>
             </nav>
-            <div id="clock-feature" class="content active">
-                <span id = "clock-time">Clock time</span>
-                <button onclick="toggleTime()">Toggle 12hr/24hr format</button>
+            <div id="content-container">
+                <div id="clock-feature" class="content">
+                    <span id = "clock-time">Clock time</span>
+                    <button onclick="toggleTime()">Toggle 12hr/24hr format</button>
+                </div>
+                <div id="countdown-feature" class = "content">
+                    <span id = "countdown-time">Press Start to begin the countdown!</span>
+                    <button onclick="toggleCountdown()">Start/Stop</button>
+                    <button onclick="resetCountdown()">Reset</button>
+                </div>
+                <div id="stopwatch-feature" class = "content">
+                    <span id = "stopwatch-time">Press Start to begin the stopwatch!</span>
+                    <button onclick="toggleStopwatch()">Start/Stop</button>
+                    <button onclick="resetStopwatch()">Reset</button>
+                </div>
             </div>
-            <div id="countdown-feature" class = "content">
-                <span id = "countdown-time">Press Start to begin the countdown!</span>
-                <button onclick="toggleCountdown()">Start</button>
-                <button onclick="toggleCountdown()">Stop</button>
-            </div>
-            <div id="stopwatch-feature" class = "content">
-                <span id = "stopwatch-time">Press Start to begin the stopwatch!</span>
-                <button onclick="toggleStopwatch()">Start</button>
-                <button onclick="toggleStopwatch()">Stop</button>
-            </div>
+            <div id = "credits">Created by Chong Shen Rui</div>
         </div>
     </main>
 </body>

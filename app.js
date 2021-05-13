@@ -30,7 +30,7 @@ function toggleTab(tabName, buttonName) {
 
         let element = allTabs[tabIndex];
         if (element.id == tabName) {
-            element.style.display = "block";
+            element.style.display = "flex";
             element.classList.add('active');
         } else {
             element.style.display = "none";
@@ -108,6 +108,14 @@ function startStopwatch() {
         stopwatchTime++;
         setTimeout(startStopwatch, 1000);
     }
+}
+
+function resetCountdown() {
+    document.getElementById("countdown-time").innerText = "01:00:00";
+}
+
+function resetStopwatch() {
+    document.getElementById("stopwatch-time").innerText = "00:00:00";
 }
 
 //============================================== Functions to Run on Start ==============================================//

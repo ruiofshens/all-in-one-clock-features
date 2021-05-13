@@ -16,6 +16,29 @@ body {
   left: 0;
 }
 
+#main-container {
+  display: flex;
+}
+
+#content-container {
+  width: 80%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 20%;
+}
+
+#credits {
+  position: fixed;
+  z-index: 2;
+  width: 20%;
+  height: 8%;
+  right: 0%;
+  bottom: 0%;
+  font: bold 1.5em "Open Sans", serif;
+  color: rgb(212, 209, 209);
+}
+
 button {
   flex: 1;
   font: bold 2em "Open Sans", serif;
@@ -55,26 +78,34 @@ button#stopwatch {
 #countdown-time,
 #stopwatch-time {
   font-family: "Orbitron", serif;
-  font-size: 6rem;
+  font-size: 7rem;
+  flex: 1;
+  display: block;
 }
 
 #clock-feature button,
 #countdown-feature button,
 #stopwatch-feature button {
-  padding: 1em;
+  padding: 0.5em;
   border-radius: 8px;
   color: rgb(56, 56, 56);
   background-color: #81b29a;
   font-size: 2rem;
   border: black;
   cursor: pointer;
+  flex: 1;
+  margin: 0.5em;
 }
 
 .content {
-  margin-left: 20%;
   top: 50%;
-  left: 40%;
+  left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
   font: bold 6em "Open Sans", serif;
+  align-items: center;
+  column-gap: 50px;
 }
