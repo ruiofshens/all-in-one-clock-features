@@ -17,20 +17,24 @@
             <nav>
                 <div id="navbar-container">
                     <button class="nav-button" id="clock" onclick="toggleTab('clock-feature', 'clock')">Clock</button>
-                    <button class="nav-button" id="timer" onclick="toggleTab('timer-feature', 'timer'); toggleCountdown()">Timer</button>
+                    <button class="nav-button" id="countdown" onclick="toggleTab('countdown-feature', 'countdown')">Countdown</button>
                     <button class="nav-button" id="stopwatch" onclick="toggleTab('stopwatch-feature', 'stopwatch')">Stopwatch</button>
                 </div>
             </nav>
             <div id="clock-feature" class="content active">
-                <span id = "clock-time"></span>
+                <span id = "clock-time">Clock time</span>
                 <button onclick="toggleTime()">Toggle 12hr/24hr format</button>
             </div>
-            <div id="timer-feature" class = "content">
-                <span id = "timer-time">Timer</span>
+            <div id="countdown-feature" class = "content">
+                <span id = "countdown-time">Press Start to begin the countdown!</span>
                 <button onclick="toggleCountdown()">Start</button>
                 <button onclick="toggleCountdown()">Stop</button>
             </div>
-            <div id="stopwatch-feature" class = "content">Stopwatch</div>
+            <div id="stopwatch-feature" class = "content">
+                <span id = "stopwatch-time">Press Start to begin the stopwatch!</span>
+                <button onclick="toggleStopwatch()">Start</button>
+                <button onclick="toggleStopwatch()">Stop</button>
+            </div>
         </div>
     </main>
 </body>

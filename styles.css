@@ -33,7 +33,7 @@ button#clock {
   background-image: linear-gradient(to right, #23723d, #45d3c9);
 }
 
-button#timer {
+button#countdown {
   /* background-color: #f2cc8f; */
   background-image: linear-gradient(to right, #e7a02e, #eed6af);
 }
@@ -43,7 +43,7 @@ button#stopwatch {
   background-image: linear-gradient(to right, #fd5b42, #fdc59a);
 }
 
-#timer-feature {
+#countdown-feature {
   display: none;
 }
 
@@ -52,13 +52,15 @@ button#stopwatch {
 }
 
 #clock-time,
-#timer-time {
+#countdown-time,
+#stopwatch-time {
   font-family: "Orbitron", serif;
   font-size: 6rem;
 }
 
 #clock-feature button,
-#timer-feature button {
+#countdown-feature button,
+#stopwatch-feature button {
   padding: 1em;
   border-radius: 8px;
   color: rgb(56, 56, 56);
