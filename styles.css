@@ -1,100 +1,93 @@
 body {
   background-color: #3d405b;
-  /* background-image: url("images/background-min.jpg");
-  background-size: cover; */
   background-image: linear-gradient(to right, #676977, #292f64);
   box-sizing: border-box;
-}
-
-#navbar-container {
-  height: 100%;
-  width: 20%;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  top: 0;
-  left: 0;
 }
 
 #main-container {
   display: flex;
 }
 
-#content-container {
-  width: 80%;
+#navbar-container {
   height: 100%;
+  width: 20%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#content-container {
+  height: 100%;
+  width: 80%;
   position: fixed;
   top: 0;
   left: 20%;
 }
 
-#credits {
+#info-container {
   position: fixed;
-  z-index: 2;
-  width: 20%;
-  height: 8%;
-  right: 0%;
-  bottom: 0%;
-  font: bold 1.5em "Open Sans", serif;
+  width: 28%;
+  height: 4%;
+  right: 2vw;
+  bottom: 2vw;
+  font: bold 2vw "Open Sans", serif;
   color: rgb(212, 209, 209);
 }
 
 button {
   flex: 1;
-  font: bold 2em "Open Sans", serif;
+  font: bold 2vw "Open Sans", serif;
   color: rgb(56, 56, 56);
-  overflow-x: hidden;
 }
 
 button.active,
 button:hover {
-  opacity: 0.75;
+  opacity: 0.5;
 }
 
-button#clock {
-  /* background-color: #81b29a; */
+#clock-tab {
   background-image: linear-gradient(to right, #23723d, #45d3c9);
 }
 
-button#countdown {
-  /* background-color: #f2cc8f; */
+#countdown-tab {
   background-image: linear-gradient(to right, #e7a02e, #eed6af);
 }
 
-button#stopwatch {
-  /* background-color: #e07a5f; */
+#stopwatch-tab {
   background-image: linear-gradient(to right, #fd5b42, #fdc59a);
 }
 
-#countdown-feature {
+/* Hide inactive tabs initially */
+#countdown-content,
+#stopwatch-content {
   display: none;
 }
 
-#stopwatch-feature {
-  display: none;
-}
-
+/* Texts that show the respective times*/
 #clock-time,
 #countdown-time,
 #stopwatch-time {
-  font-family: "Orbitron", serif;
-  font-size: 7rem;
   flex: 1;
   display: block;
+  font-family: "Orbitron", serif;
+  font-size: 6vw;
 }
 
-#clock-feature button,
-#countdown-feature button,
-#stopwatch-feature button {
-  padding: 0.5em;
-  border-radius: 8px;
+/* Buttons within the content only */
+#clock-content button,
+#countdown-content button,
+#stopwatch-content button {
+  flex: 1;
+  font-size: 2vw;
   color: rgb(56, 56, 56);
   background-color: #81b29a;
-  font-size: 2rem;
   border: black;
-  cursor: pointer;
-  flex: 1;
+  border-radius: 8px;
+  padding: 0.5em;
   margin: 0.5em;
+  cursor: pointer;
 }
 
 .content {
@@ -102,10 +95,53 @@ button#stopwatch {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   font: bold 6em "Open Sans", serif;
   align-items: center;
-  column-gap: 50px;
+}
+
+/* Responsive Design - for phones and tablets 
+   Horizontal nav bar becomes vertical
+   Flex directions and font-sizes change accordingly */
+@media screen and (max-width: 700px) {
+  #main-container {
+    flex-direction: column;
+  }
+
+  #navbar-container {
+    height: 10%;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  #content-container {
+    width: 100%;
+    height: 90%;
+    top: 10%;
+    left: 0%;
+  }
+
+  #info-container {
+    width: 55%;
+    height: 4%;
+    font: bold 4vw "Open Sans", serif;
+  }
+
+  #clock-time,
+  #countdown-time,
+  #stopwatch-time {
+    font-size: 10vw;
+  }
+
+  .nav-button {
+    font-size: 5vw;
+  }
+
+  #clock-content button,
+  #countdown-content button,
+  #stopwatch-content button {
+    font-size: 4vw;
+  }
 }

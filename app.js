@@ -1,8 +1,8 @@
 //============================================== Overall Functionality ==============================================//
 
 //Declare sidebar buttons and their respective contents
-let allTabs = document.getElementsByClassName("content");
-let allTabs2 = document.getElementsByClassName("nav-button");
+let contents = document.getElementsByClassName("content");
+let tabs = document.getElementsByClassName("nav-button");
 
 //Variable that dictates which time format to use
 let timeFormat = 0;
@@ -14,22 +14,21 @@ let stopwatchActive = false;
 let stopwatchTime = 0;
 
 //Toggles content
-function toggleTab(tabName, buttonName) {
+function toggleTab(contentName, tabName) {
     countdownActive = false;
     stopwatchActive = false;
     let tabIndex;
 
-    for (tabIndex = 0; tabIndex < allTabs.length; tabIndex++) {
-        
-        let button = allTabs2[tabIndex];
-        if(button.id == buttonName) {
-            button.classList.add('active');
+    for (tabIndex = 0; tabIndex < contents.length; tabIndex++) {
+        let tab = tabs[tabIndex];
+        if(tab.id == tabName) {
+            tab.classList.add('active');
         } else {
-            button.classList.remove('active');
+            tab.classList.remove('active');
         }
 
-        let element = allTabs[tabIndex];
-        if (element.id == tabName) {
+        let element = contents[tabIndex];
+        if (element.id == contentName) {
             element.style.display = "flex";
             element.classList.add('active');
         } else {

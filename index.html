@@ -16,28 +16,28 @@
         <div id="main-container">
             <nav>
                 <div id="navbar-container">
-                    <button class="nav-button" id="clock" onclick="toggleTab('clock-feature', 'clock')">Clock</button>
-                    <button class="nav-button" id="countdown" onclick="toggleTab('countdown-feature', 'countdown')">Countdown</button>
-                    <button class="nav-button" id="stopwatch" onclick="toggleTab('stopwatch-feature', 'stopwatch')">Stopwatch</button>
+                    <button id="clock-tab" class="nav-button" onclick="toggleTab('clock-content', 'clock-tab')">Clock</button>
+                    <button id="countdown-tab" class="nav-button" onclick="toggleTab('countdown-content', 'countdown-tab')">Countdown</button>
+                    <button id="stopwatch-tab" class="nav-button" onclick="toggleTab('stopwatch-content', 'stopwatch-tab')">Stopwatch</button>
                 </div>
             </nav>
             <div id="content-container">
-                <div id="clock-feature" class="content">
+                <div id="clock-content" class="content active">
                     <span id = "clock-time">Clock time</span>
                     <button onclick="toggleTime()">Toggle 12hr/24hr format</button>
                 </div>
-                <div id="countdown-feature" class = "content">
-                    <span id = "countdown-time">Press Start to begin the countdown!</span>
+                <div id="countdown-content" class = "content">
+                    <span id = "countdown-time">Start Countdown (1hr)!</span>
                     <button onclick="toggleCountdown()">Start/Stop</button>
                     <button onclick="resetCountdown()">Reset</button>
                 </div>
-                <div id="stopwatch-feature" class = "content">
-                    <span id = "stopwatch-time">Press Start to begin the stopwatch!</span>
+                <div id="stopwatch-content" class = "content">
+                    <span id = "stopwatch-time">Start Stopwatch!</span>
                     <button onclick="toggleStopwatch()">Start/Stop</button>
                     <button onclick="resetStopwatch()">Reset</button>
                 </div>
             </div>
-            <div id = "credits">Created by Chong Shen Rui</div>
+            <div id = "info-container">Created by Chong Shen Rui</div>
         </div>
     </main>
 </body>
